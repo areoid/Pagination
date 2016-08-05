@@ -9,13 +9,14 @@
 class Pagination {
 	private $_total, $_per_page, 
 			$_page, $_base_page_url,
-			$_page_url 				= null;
+			$_page_url			= null;
 	private $_ul_class = 'pagination no-margin';
   
-  /**
-  * Setup pagination config
-  * @params array
-  * @return void
+	/**
+	* Setup pagination config
+	* @params array
+	* @return void
+	* /
 	public function paginationSetup($setup) {
 		$this->_total         = $setup['total'];
 		$this->_per_page      = $setup['per_page'];
@@ -26,10 +27,10 @@ class Pagination {
 		$this->_show_number   = 5;
 	}
   
-  /**
-  * Rendering pagination script
-  * @return string
-  */
+	/**
+	* Rendering pagination script
+	* @return string
+	*/
 	public function createPaginationLink() {
 		$max_page = ceil($this->_total / $this->_per_page);
 
@@ -93,3 +94,5 @@ class Pagination {
 	}
 
 }
+
+// EOF
