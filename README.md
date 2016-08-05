@@ -5,7 +5,7 @@ Pagination PHP - a PHP Library for create the pagination pages
 ```php
 <?php
 
-require_once('Pagination.php'); // loud the Pagination Class
+require_once('Pagination.php'); // load the Pagination Class
 
 $pagination = new Pagination();
 
