@@ -16,7 +16,7 @@ class Pagination {
 	* Setup pagination config
 	* @params array
 	* @return void
-	* /
+	*/
 	public function paginationSetup($setup) {
 		$this->_total         = $setup['total'];
 		$this->_per_page      = $setup['per_page'];
