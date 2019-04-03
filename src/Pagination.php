@@ -1,17 +1,19 @@
 <?php
+namespace Areoid\Pagination;
 
 /**
 * Author : areoid a.k.a areg_noid | areg_noid@yahoo.com
 * Filename : Pagination Class
-* Pubblished : August 5th, 2016
+* Published : August 5th, 2016
+* Updated : April 4th, 2019
 */
 
 class Pagination {
-	private $_total, $_per_page, 
+	private $_total, $_per_page,
 			$_page, $_base_page_url,
 			$_page_url			= null;
 	private $_ul_class = 'pagination no-margin';
-  
+
 	/**
 	* Setup pagination config
 	* @params array
@@ -26,7 +28,7 @@ class Pagination {
 		$this->_ul_class      = !empty($setup['ul_class']) ? $setup['ul_class'] : $this->_ul_class;
 		$this->_show_number   = 5;
 	}
-  
+
 	/**
 	* Rendering pagination script
 	* @return string
@@ -67,7 +69,7 @@ class Pagination {
 		$script_pagination = '<ul class="'.$this->_ul_class.'">';
 
 		// prev
-		if($this->_page > 1) {			
+		if($this->_page > 1) {
 			$prev     = $this->_page-1;
 			$url_prev = $prev == 1 ? $this->_base_page_url : $this->_page_url.$prev;
 			$script_pagination .= '<li><a rel="prev" href="'.$url_prev.'">&laquo; Prev</a></li>';
@@ -88,7 +90,7 @@ class Pagination {
 		}
 
 		$script_pagination .= '</ul>';
-		
+
 		return $script_pagination;
 
 	}
