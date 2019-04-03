@@ -1,0 +1,25 @@
+{
+	"name": "areoid/pagination",
+	"description": "Pager builder library",
+	"version": "1.0.0",
+	"keywords": [
+		"PHP", "pagination", "pager"
+	],
+	"homepage": "https://github.com/areoid/Pagination",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Aji Prastiya",
+			"email": "aji.prastiya.ok@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">= 5.6"
+	},
+	"autoload": {
+		"psr-4": {
+			"Areoid\\Pagination\\": "src"
+		}
+	}
+}
